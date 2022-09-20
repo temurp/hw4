@@ -12,6 +12,9 @@ services:
                           
         dbviewer:
                 image: dpage/pgadmin4:latest
+                environment:
+                        PGADMIN_DEFAULT_EMAIL: temurpallaev@gmail.com 
+                        PGADMIN_DEFAULT_PASSWORD: pss123
                 ports: 
                         - "5433:5432"
                 depends_on:
