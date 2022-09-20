@@ -1,4 +1,4 @@
-version: 3
+version: "3.8.8.8.8.8.8.8.8"
 
 services:
         db:
@@ -13,6 +13,6 @@ services:
         dbviewer:
                 image: dpage/pgadmin4:latest
                 ports: 
-                        - "5432:5432"
+                        - "5433:5432"
                 depends_on:
                         - db         
