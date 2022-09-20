@@ -1,0 +1,18 @@
+version: 3
+
+services:
+        db:
+                image: postgres:13-alpine
+                environment: 
+                        POSTGRES_PASSWORD: superstr0ngpass
+                ports:
+                        - "5432:5432"
+                volumes: 
+                        - /home/temur/data3:/var/lib/db
+                          
+        dbviewer:
+                image: dpage/pgadmin4:latest
+                ports: 
+                        - "5432:5432"
+                depends_on:
+                        - db         
